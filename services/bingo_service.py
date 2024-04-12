@@ -18,17 +18,12 @@ class BingoService:
         return sorted(numbers_list)
 
     def get_card(self) -> List[list]:
-        first_column = self.__get_numbers(1, 15)
-        second_column = self.__get_numbers(16, 30)
-        third_column = self.__get_numbers(31, 45)
-        fourth_column = self.__get_numbers(46, 60)
-        fifth_column = self.__get_numbers(61, 75)
         card = [
-            first_column,
-            second_column, 
-            third_column,
-            fourth_column,
-            fifth_column
+            self.__get_numbers(1, 15),
+            self.__get_numbers(16, 30),
+            self.__get_numbers(31, 45),
+            self.__get_numbers(46, 60),
+            self.__get_numbers(61, 75)
         ]
         card_ordered_list = sum(card, [])
         for card_database in self.__cards_database_list:
