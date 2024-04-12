@@ -76,6 +76,15 @@ class TestBingo(unittest.TestCase):
         _, percentage = self.bingo.get_drawn_numbers_list_and_percentage(total_bingo_numbers=2)
         self.assertEqual(percentage, 100.0)
 
+    def test_get_bingo_action(self):
+        sum(self.bingo.get_card(), [])
+        sum(self.bingo.get_card(), [])
+        for _ in range(0, 75):
+            self.bingo.get_drawn_numbers()
+            bingo = self.bingo.has_bingo()
+            if bingo:
+                break
+        self.assertEqual(bingo, True)
 
 if __name__ == '__main__':
     unittest.main()

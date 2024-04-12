@@ -28,3 +28,8 @@ def get_number():
 def get_numbers_list():
     numbers, percentage = bingo_controller.get_drawn_numbers_list_and_percentage()
     return parse_result({"numbers": numbers, "percentage": percentage}, status_code=200)
+
+@app.get("/bingo/has-bingo")
+def get_bingo():
+    bingo = bingo_controller.has_bingo()
+    return parse_result(bingo)
