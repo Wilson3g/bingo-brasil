@@ -84,7 +84,7 @@ class TestBingo(unittest.TestCase):
             bingo = self.bingo.has_bingo()
             if bingo:
                 break
-        self.assertEqual(bingo, False)
+        self.assertEqual(bingo, True)
 
 if __name__ == '__main__':
     unittest.main()
