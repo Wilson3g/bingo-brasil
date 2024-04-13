@@ -10,6 +10,16 @@
             "cwd": "${workspaceFolder}",
             "env": {"PYTHONPATH": "${cwd}"
             }
+        },
+        {
+            "name": "Python: Test File",
+            "type": "python",
+            "request": "launch",
+            "program": "tests/test_unit_bingo.py",
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}",
+            "env": {"PYTHONPATH": "${cwd}"
+            }
         }
-        ]
+    ]
 }
