@@ -1,14 +1,14 @@
 import random
 from typing import List
 
-from repository.bingo_repository_in_memory import (
-    BingoRepositoryInterface,
-    BingoInMemoryReposository
+from repository.bingo_repository import (
+    BingoInMemoryReposository,
+    BingoReposository
 )
 
 class BingoService:
-    def __init__(self, respository: BingoRepositoryInterface | BingoInMemoryReposository):
-        self.__repository = respository if respository else BingoRepositoryInterface()
+    def __init__(self, respository: BingoReposository | BingoInMemoryReposository):
+        self.__repository = respository if respository else BingoReposository()
 
     def get_bingo(self):
         return {"Hello": "World"}

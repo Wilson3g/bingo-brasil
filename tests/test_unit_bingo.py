@@ -1,9 +1,7 @@
 import unittest
 
 from controllers.bingo_controller import Bingo
-from repository.bingo_repository_in_memory import (
-    BingoInMemoryReposository
-)
+from repository.bingo_repository import BingoInMemoryReposository
 
 
 class TestBingo(unittest.TestCase):
