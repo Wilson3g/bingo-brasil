@@ -1,11 +1,15 @@
 import unittest
 
 from controllers.bingo_controller import Bingo
+from repository.bingo_repository_in_memory import (
+    BingoInMemoryReposository
+)
 
 
 class TestBingo(unittest.TestCase):
     def setUp(self):
-        self.bingo = Bingo()
+        self.mock = BingoInMemoryReposository()
+        self.bingo = Bingo(self.mock)
 
     def test_bingo_card_total_columns(self):
         """Verifica se a quantidade de colunas retornadas é igual a 5"""
